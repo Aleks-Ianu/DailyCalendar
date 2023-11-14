@@ -15,5 +15,17 @@
   for (let i = 0; i < hoursOfTheDay.length; i++) {
       const hour = hoursOfTheDay[i];
       // Do something with each hour
-      $('.container').append(hour)
+      var hourly = $("<div class='row time-block'>");
+      $(".container").append(hourly);
+    //   hourly.attr("data-time", hour);
+    //   am or pm
+    var hourSpec = $("<div class='hour col-2'>");
+    if (hour >= 9 && hour <= 11) {
+        hourSpec.text(hour + "am");
+    } else if (hour >= 1 && hour <= 5) {
+        hourSpec.text(hour + "pm");
+    } else {
+        hourSpec.text(hour + "pm");
+    }
+    hourly.append(hourSpec);
     }
