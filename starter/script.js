@@ -1,5 +1,7 @@
   // Declare the dayjs variable
   var dayjs = window.dayjs;
+  var currentHour = dayjs().hour();
+  console.log(currentHour);
 
   // Extend dayjs with plugins
   dayjs.extend(window.dayjs_plugin_advancedFormat);
@@ -28,4 +30,23 @@
         hourSpec.text(hour + "pm");
     }
     hourly.append(hourSpec);
+
+    var toDoText = $("<textarea class='col-9 description'>");
+    // append text area to hourly div
+    $(hourly).append(toDoText);
+
+    // create a button for each hourly div
+    var saveChangeBtn = $("<button class='col-1 saveBtn'><i class='fa-save fas'></i></button>");
+    $(hourly).append(saveChangeBtn);
+
+    // check for time to see if currentTime is past the time displayed, current or before
+    if (currentHour === hour) {
+        hourSpec.addClass("present");
+    } else if (currentHour > hour) {
+        hourSpec.addClass("past");
+    } else {
+        hourSpec.addClass("future");
+    }
+    
+
     }
