@@ -2,7 +2,7 @@
 var dayjs = window.dayjs;
 //   get current hour from api
 var currentHour = dayjs().hour();
-//   console.log(currentHour);
+  // console.log(currentHour);
 
 // Extend dayjs with plugins
 dayjs.extend(window.dayjs_plugin_advancedFormat);

@@ -9,6 +9,8 @@ screenshot of working application:
   
 ![images/demo.jpeg](images/demo.jpeg)
 
+Link to deployed application = https://aleks-ianu.github.io/DailyCalendar/
+
 ## License
 
 MIT Licence.

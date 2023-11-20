@@ -44,7 +44,9 @@ header {
 }
 
 .past {
-  background-color: #d3d3d3;
+  /* changed color from grey to a different color as it may create confusion to see if the time changes the color... */
+  /* background-color: #d3d3d3; */
+  background-color: purple;
   color: black;
 }
 
